@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IslandController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <ul>
+        {% for island in islands  %}
+            <li>{{ island }} <a href="{{ url('app_island_edit',{'id':island.id}) }}">EDIT</a> <a href="{{ url('app_island_delete',{'id':island.id}) }}">DELETE</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
