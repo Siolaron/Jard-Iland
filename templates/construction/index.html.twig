@@ -9,7 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-
+    <p>Ajouter une construction <a href="{{url('app_construction_add')}}">ADD</a></p>
     <ul>
     {% for construction in constructions  %}
         <li>{{ construction }} <a href="{{ url('app_construction_edit',{'id':construction.id}) }}">EDIT</a> <a href="{{ url('app_construction_delete',{'id':construction.id}) }}">DELETE</a></li>

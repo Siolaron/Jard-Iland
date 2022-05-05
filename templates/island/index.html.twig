@@ -9,6 +9,7 @@
 </style>
 
 <div class="example-wrapper">
+    <p>Ajouter une île <a href="{{url('app_island_add')}}">ADD</a></p>
     <ul>
         {% for island in islands  %}
             <li>{{ island }} <a href="{{ url('app_island_edit',{'id':island.id}) }}">EDIT</a> <a href="{{ url('app_island_delete',{'id':island.id}) }}">DELETE</a></li>

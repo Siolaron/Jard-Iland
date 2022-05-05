@@ -9,6 +9,7 @@
 </style>
 
 <div class="example-wrapper">
+    <p>Ajouter une personne <a href="{{url('app_person_add')}}">ADD</a></p>
     <ul>
         {% for person in persons  %}
             <li>{{ person }} <a href="{{ url('app_person_edit',{'id':person.id}) }}">EDIT</a> <a href="{{ url('app_person_delete',{'id':person.id}) }}">DELETE</a></li>

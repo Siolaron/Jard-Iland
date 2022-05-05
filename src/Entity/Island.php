@@ -23,12 +23,14 @@ class Island
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Votre île doit obligatoirement avoir un nom")
+     * @Assert\Length(min=3)
      */
     private $name;
 
     /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank(message="Votre île doit obligatoirement avoir une localisation")
+     * @Assert\Length(min=3)
      */
     private $localisation;
 
