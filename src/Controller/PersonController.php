@@ -32,6 +32,16 @@ class PersonController extends AbstractController
     }
 
     /**
+     * @Route("/person/show/{id}", name="app_person_show")
+     */
+    public function show(Person $person):Response
+    {
+        return $this->render('person/show.html.twig',[
+           'person'=>$person
+        ]);
+    }
+
+    /**
      * @Route("/person/add", name="app_person_add")
      */
     public function add(Request $request):Response

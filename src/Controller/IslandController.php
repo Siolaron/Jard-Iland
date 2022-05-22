@@ -21,6 +21,16 @@ class IslandController extends AbstractController
     }
 
     /**
+     * @Route("/island/show/{id}", name="app_island_show")
+     */
+    public function show(Island $island):Response
+    {
+        return $this->render('island/show.html.twig',[
+            'island'=>$island
+        ]);
+    }
+    
+    /**
      * @Route("/island", name="app_island")
      */
     public function index(IslandRepository $islandRepository): Response

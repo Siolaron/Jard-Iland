@@ -24,6 +24,16 @@ class ConstructionController extends AbstractController
     }
 
     /**
+     * @Route("/construction/show/{id}", name="app_construction_show")
+     */
+    public function show(Construction $construction):Response
+    {
+        return $this->render('construction/show.html.twig',[
+            'construction'=>$construction
+        ]);
+    }
+
+    /**
      * @Route("/construction/add", name="app_construction_add")
      */
     public function add(Request $request, EntityManagerInterface $entityManager):Response
