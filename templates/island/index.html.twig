@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IslandController!{% endblock %}
+{% block title %}{{parent()}} | Île{% endblock %}
 
 {% block body %}
 <style>
@@ -9,10 +9,10 @@
 </style>
 
 <div class="example-wrapper">
-    <p>Ajouter une île <a href="{{url('app_island_add')}}">ADD</a></p>
+    <p>Ajouter une île <a href="{{url('app_island_add')}}"><button type="button" class="btn btn-primary">Ajouter</button></a></p>
     <ul>
         {% for island in islands  %}
-            <li>{{ island }} <a href="{{ url('app_island_edit',{'id':island.id}) }}">EDIT</a> <a href="{{ url('app_island_delete',{'id':island.id}) }}">DELETE</a></li>
+            <li>{{ island }} <a href="{{ url('app_island_edit',{'id':island.id}) }}"><button type="button" class="btn btn-warning">EDIT</button></a> <a href="{{ url('app_island_delete',{'id':island.id}) }}"><button type="button" class="btn btn-danger">DELETE</button></a></li>
         {% endfor %}
     </ul>
 </div>

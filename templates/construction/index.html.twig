@@ -9,10 +9,10 @@
 </style>
 
 <div class="example-wrapper">
-    <p>Ajouter une construction <a href="{{url('app_construction_add')}}">ADD</a></p>
+    <p>Ajouter une construction <a href="{{url('app_construction_add')}}"><button type="button" class="btn btn-primary">Ajouter</button></a></p>
     <ul>
     {% for construction in constructions  %}
-        <li>{{ construction }} <a href="{{ url('app_construction_edit',{'id':construction.id}) }}">EDIT</a> <a href="{{ url('app_construction_delete',{'id':construction.id}) }}">DELETE</a></li>
+        <li>{{ construction }} <a href="{{ url('app_construction_edit',{'id':construction.id}) }}"><button type="button" class="btn btn-warning">EDIT</button></a> <a href="{{ url('app_construction_delete',{'id':construction.id}) }}"><button type="button" class="btn btn-danger">DELETE</button></a></li>
     {% endfor %}
     </ul>
 </div>

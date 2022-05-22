@@ -46,7 +46,7 @@ class Island
 
 
     public function __toString(){
-        return $this->name.' appartient à '.$this->person;
+        return $this->name;
     }
 
     public function __construct()

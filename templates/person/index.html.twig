@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PersonController!{% endblock %}
+{% block title %}{{parent()}} | Personne{% endblock %}
 
 {% block body %}
 <style>
@@ -9,10 +9,10 @@
 </style>
 
 <div class="example-wrapper">
-    <p>Ajouter une personne <a href="{{url('app_person_add')}}">ADD</a></p>
+    <p>Ajouter une personne <a href="{{url('app_person_add')}}"><button type="button" class="btn btn-primary">Ajouter</button></a></p>
     <ul>
         {% for person in persons  %}
-            <li>{{ person }} <a href="{{ url('app_person_edit',{'id':person.id}) }}">EDIT</a> <a href="{{ url('app_person_delete',{'id':person.id}) }}">DELETE</a></li>
+            <li>{{ person }} <a href="{{ url('app_person_edit',{'id':person.id}) }}"><button type="button" class="btn btn-warning">EDIT</button></a> <a href="{{ url('app_person_delete',{'id':person.id}) }}"><button type="button" class="btn btn-danger">DELETE</button></a></li>
         {% endfor %}
     </ul>
 </div>

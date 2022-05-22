@@ -1,3 +1,14 @@
 body {
     background-color: lightgray;
 }
+h1 {
+    text-align: center;
+}
+
+.description{
+    border: solid black 1px;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}

@@ -4,4 +4,22 @@
 
 {% block body %}
     <h1>{{ title }}</h1>
+    <div class="description">
+        <p>
+            Grâce à ce site vous pouvez créer votre propre île avec des batîments et également ajoutez un propriétaire à cette île.
+            N'hésitez pas à vous balader dans les  différents menus pour voir ce qu'il en est.
+        </p>
+    </div>
+    <div class="content">
+        <p>Voici la liste des îles sans propriétaire:</p>
+        {% if islands is empty%}
+            <p>Il n'y a pas d'île sans propriétaire.</p>
+        {%else%}
+            <ul>
+                {% for island in islands  %}
+                    <li>{{ island }}</li>
+                {% endfor %}
+            </ul>
+        {%endif%}
+    </div>
 {% endblock %}
